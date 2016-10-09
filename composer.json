@@ -1,0 +1,25 @@
+{
+    "name": "zx-coder/location-client",
+    "description": "Client for get locations from http json response",
+    "authors": [
+        {
+            "name": "zx-coder",
+            "email": "zx-coder@mail.ru"
+        }
+    ],
+    "require": {
+        "symfony/serializer": "^3.1",
+        "symfony/validator": "^3.1",
+        "guzzlehttp/guzzle": "^6.2",
+        "symfony/property-access": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6",
+        "symfony/framework-bundle": "^3.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+parameters:
+  location_client.uri: ~
+
+services:
+  location_client.client:
+    class: ZxCoder\LocationClient\Service\Client
+    arguments:
+      - "@location_client.transport"
+      - "@location_client.validator"
+      - "@location_client.location_factory"
+
+  location_client.transport:
+    class: ZxCoder\LocationClient\Service\Transport\JsonTransport
+    calls:
+      - [setUri, ['%location_client.uri%']]
+
+  location_client.validator:
+    class: ZxCoder\LocationClient\Service\Validator\JsonValidator
+
+  location_client.location_factory:
+    class: ZxCoder\LocationClient\Service\LocationFactory\JsonLocationFactory
